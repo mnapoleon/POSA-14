@@ -47,7 +47,8 @@ public class LoginActivity extends StoryActivityBase{
 	public static File getLoginFile (Context context) {
 		return StorageUtilities.getOutputMediaFile(context, 	// Line 48
 				StorageUtilities.MEDIA_TYPE_TEXT, 
-				MAX_SECURITY, 
+				StorageUtilities.SECURITY_PRIVATE,  // changed this to SECURITY_PRIVATE because any other c
+				                                    // value would cause storage to a public place.
 				"login.txt");
 	}
 	
